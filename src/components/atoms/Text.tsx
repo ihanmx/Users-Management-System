@@ -2,16 +2,12 @@ import { cn } from "@/lib/cn";
 interface Props {
   children: React.ReactNode;
 
-  size?: "sm" | "md" | "lg" | "xl" 
-  variant?:"secondary" | "disabled" ;
-
   size?: "sm" | "md" | "lg" | "xl";
   variant?: "secondary" | "disabled";
-
   center?: boolean;
   className?: string;
 }
-export default function Title({
+export default function Text({
   children,
   size = "md",
   variant = "secondary",

@@ -1,7 +1,7 @@
 import { cn } from "@/lib/cn";
 interface Props {
   size?: number;
-  color?: "black" | "disabled";
+  color?: "black" | "disabled" | "primary" | "secondary" | "ghost" | "outline1";
   className?: string;
   IconComponent: React.ComponentType<{
     size?: number;
@@ -17,6 +17,10 @@ export default function Icon({
   const colors = {
     black: "ds-text-primary",
     disabled: "ds-text-disabled",
+    primary: "ds-text-primary",
+    secondary: "ds-text-secondary",
+    ghost: "ds-text-ghost",
+    outline1: "ds-text-outline1",
   };
   return <IconComponent size={size} className={cn(colors[color], className)} />;
 }
