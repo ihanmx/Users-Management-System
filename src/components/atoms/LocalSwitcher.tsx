@@ -1,6 +1,5 @@
 // app/components/LocaleSwitcher.tsx
 "use client";
-import { useEffect } from "react";
 import { Locale, useLocale } from "next-intl";
 import { cn } from "@/lib/cn";
 
@@ -10,12 +9,6 @@ type Props = {
 
 export default function LocaleSwitcher({ changeLocaleAction }: Props) {
   const locale = useLocale();
-  useEffect(() => {
-    const dir = locale === "ar" ? "rtl" : "ltr";
-    document.documentElement.setAttribute("dir", dir);
-    document.documentElement.setAttribute("lang", locale);
-  }, [locale]);
-
   const nextLocale = locale === "en" ? "ar" : "en";
   const baseClasses = `
     fixed
