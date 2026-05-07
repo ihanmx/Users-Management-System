@@ -1,0 +1,9 @@
+{
+  "Navbar": {
+    "brand": "SurveyLand"
+  },
+  "Common": {
+    "users": "Users",
+    "loading": "Loading..."
+  }
+}
