@@ -1,11 +1,11 @@
 "use client";
 import clsx from "clsx";
-import { useLocale } from "next-intl";
 import { forwardRef, useState } from "react";
 import { Eye, EyeOff } from "@/assets/icons/icons";
 
 interface InputFormProps extends React.InputHTMLAttributes<HTMLInputElement> {
   width?: "w-full" | "w-fit";
+  togglePasswordLabel?: string;
 }
 
 const InputForm = forwardRef<HTMLInputElement, InputFormProps>(
@@ -17,13 +17,13 @@ const InputForm = forwardRef<HTMLInputElement, InputFormProps>(
       className = "mb-3",
       onChange,
       width = "w-full",
+      togglePasswordLabel,
       ...rest
     },
     ref,
   ) => {
     const [show, setShow] = useState(false);
     const isPassword = type === "password";
-    const locale = useLocale();
 
     return (
       <div className="relative w-full">
@@ -36,12 +36,8 @@ const InputForm = forwardRef<HTMLInputElement, InputFormProps>(
           {...rest}
           className={clsx(
             width,
-            "h-11 rounded-md border-1 border-[#00B7C1] p-3/75 outline-none placeholder:text-gray-400",
+            "h-11 rounded-md border-1 border-[#00B7C1] p-3/75 outline-none placeholder:text-gray-400 text-start placeholder:text-start",
             className,
-            {
-              "text-right placeholder:text-right": locale === "ar",
-              "text-left placeholder:text-left": locale !== "ar",
-            },
           )}
         />
 
@@ -49,10 +45,8 @@ const InputForm = forwardRef<HTMLInputElement, InputFormProps>(
           <button
             type="button"
             onClick={() => setShow((prev) => !prev)}
-            className={clsx(
-              "absolute top-1/2 -translate-y-1/2 text-gray-500",
-              locale === "ar" ? "left-3" : "right-3",
-            )}
+            aria-label={togglePasswordLabel}
+            className="absolute top-1/2 -translate-y-1/2 text-gray-500 inset-e-3"
           >
             {show ? <EyeOff size={18} /> : <Eye size={18} />}
           </button>
