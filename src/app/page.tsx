@@ -3,6 +3,7 @@ import ActionCard from "@/components/molecules/ActionCard";
 import { User } from "@/assets/icons/icons";
 import UserInfoCard from "@/components/molecules/UserInfoCard";
 import ActionSection from "@/components/organisms/ActionSection";
+import Users from "@/modules/users/components/Users";
 export default function Home() {
   return (
     <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
@@ -19,6 +20,7 @@ export default function Home() {
       />
       <UserInfoCard id="12345" name="John Doe" email="john.doe@example.com" />
       <ActionSection />
+      <Users />
     </div>
   );
 }

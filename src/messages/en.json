@@ -5,5 +5,11 @@
   "Common": {
     "users": "Users",
     "loading": "Loading..."
+  },
+  "SignIn Page": {
+    "title": "Sign In to Your Account",
+    "email": "Email",
+    "password": "Password",
+    "submit": "Sign In"
   }
 }
