@@ -3,13 +3,15 @@ import Icon from "../atoms/Icon";
 import Logo from "../atoms/logo";
 
 import { ThemeToggle } from "../atoms/ThemeButton";
-import Link from "next/dist/client/link";
+import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 interface Props {
   routes?: { id: number; key: string; path: string }[];
   actions?: React.ReactNode;
 }
 export default function Navbar({ routes, actions }: Props) {
+  const t = useTranslations("Nav");
   return (
     <nav className="flex items-center gap-3 px-6 py-4 border-b">
       <Icon IconComponent={Users} size={32} color="primary" />
@@ -22,7 +24,7 @@ export default function Navbar({ routes, actions }: Props) {
             href={route.path}
             className="text-sm font-medium text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
           >
-            {route.key}
+            {t(route.key)}
           </Link>
         ))}
         {actions}

@@ -15,10 +15,11 @@ export default function UsersTable() {
   const { data, isPending, isError, error } = useGetUsers();
   const { mutate: deleteUser } = useDeleteUser();
 
-  if (isPending) return <div>{tCommon("loading")}</div>;
-  if (isError)
-    return <div className="text-red-600">{error.message}</div>;
-  if (!data || data.length === 0) return <div>{tCommon("noUsers")}</div>;
+  if (isPending)
+    return <div className="ds-text-secondary">{tCommon("loading")}</div>;
+  if (isError) return <div className="text-red-600">{error.message}</div>;
+  if (!data || data.length === 0)
+    return <div className="ds-text-secondary">{tCommon("noUsers")}</div>;
 
   const handleView = (id: number) => router.push(`/dashboard/users/${id}`);
   const handleEdit = (id: number) => router.push(`/dashboard/users/${id}/edit`);
@@ -33,9 +34,9 @@ export default function UsersTable() {
   };
 
   return (
-    <div className="overflow-x-auto rounded-lg border border-zinc-200 dark:border-zinc-800">
+    <div className="overflow-x-auto ds-rounded-2xl border border-zinc-200 dark:border-zinc-800 ds-bg ds-shadow-sm">
       <table className="w-full text-left text-sm">
-        <thead className="bg-zinc-50 text-xs uppercase text-zinc-600 dark:bg-zinc-900 dark:text-zinc-400">
+        <thead className="ds-bg-alt text-xs uppercase ds-text-secondary">
           <tr>
             <th className="px-4 py-3 font-medium">{tCommon("name")}</th>
             <th className="px-4 py-3 font-medium">{tCommon("email")}</th>

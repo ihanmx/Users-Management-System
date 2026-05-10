@@ -1,7 +1,15 @@
+import Hero from "@/components/landing/Hero";
+import FeaturesSection from "@/components/landing/FeaturesSection";
+import StatsStrip from "@/components/landing/StatsStrip";
+import CtaSection from "@/components/landing/CtaSection";
+
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <h1>home</h1>
-    </div>
+    <main className="min-h-screen">
+      <Hero />
+      <StatsStrip />
+      <FeaturesSection />
+      <CtaSection />
+    </main>
   );
 }

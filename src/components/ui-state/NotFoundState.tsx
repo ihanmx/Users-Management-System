@@ -19,8 +19,8 @@ export default function NotFoundState({
   return (
     <div className="flex flex-col flex-1 items-center justify-center gap-6 min-h-[70vh] p-6 text-center">
       <LottiePlayer data={notFoundAnimation} size={320} />
-      <h1 className="text-2xl font-semibold">{title}</h1>
-      <p className="text-zinc-600 dark:text-zinc-400 max-w-md">{description}</p>
+      <h1 className="text-2xl font-semibold ds-text-primary">{title}</h1>
+      <p className="ds-text-secondary max-w-md">{description}</p>
       <Link href={homeHref}>
         <Button>{homeLabel}</Button>
       </Link>

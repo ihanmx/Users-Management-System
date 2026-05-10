@@ -1,17 +1,31 @@
 {
   "Navbar": {
-    "brand": "SurveyLand"
+    "brand": "UserHub"
+  },
+  "Nav": {
+    "home": "Home",
+    "signIn": "Sign in",
+    "dashboard": "Dashboard",
+    "createUser": "Create user"
+  },
+  "LogoutButton": {
+    "logout": "Log out"
   },
   "Common": {
     "users": "Users",
     "loading": "Loading...",
     "delete": "Delete",
     "cancel": "Cancel",
+    "edit": "Edit",
+    "view": "View",
+    "back": "Back",
     "errorTitle": "Something went wrong",
     "noUsers": "No users found",
     "name": "Name",
     "email": "Email",
-    "actions": "Actions"
+    "password": "Password",
+    "actions": "Actions",
+    "id": "ID"
   },
   "Users": {
     "deleteConfirmTitle": "Delete this user?",
@@ -19,7 +33,12 @@
     "deleted": "User deleted",
     "created": "User created",
     "createError": "Could not create user",
-    "deleteError": "Could not delete user"
+    "deleteError": "Could not delete user",
+    "details": "User details",
+    "memberLabel": "Member",
+    "createTitle": "Create user",
+    "creating": "Creating…",
+    "submitCreate": "Create user"
   },
   "Auth": {
     "invalidCredentials": "Invalid email or password"
@@ -29,5 +48,39 @@
     "email": "Email",
     "password": "Password",
     "submit": "Sign In"
+  },
+  "Home": {
+    "heroEyebrow": "v1.0 · CRUD made simple",
+    "heroTitle": "Manage your users with confidence.",
+    "heroSubtitle": "A clean, fast dashboard for creating, editing, and organizing users — built for teams that move quickly.",
+    "heroPrimary": "Get started",
+    "heroSecondary": "Sign in",
+    "featuresTitle": "Everything you need to run your user base",
+    "featuresSubtitle": "From quick edits to bulk operations — all in one place.",
+    "feature1Title": "Full CRUD operations",
+    "feature1Desc": "Create, read, update, and delete users in seconds with a clean, focused interface.",
+    "feature2Title": "Instant search",
+    "feature2Desc": "Find anyone in your team instantly. Filter by name, email, or activity.",
+    "feature3Title": "Multi-language ready",
+    "feature3Desc": "First-class RTL support. Localize once, deliver to users in any language.",
+    "statsTitle": "Built for teams of every size",
+    "stat1": "Users managed",
+    "stat2": "API uptime",
+    "stat3": "Avg response",
+    "stat4": "Languages",
+    "ctaTitle": "Ready to organize your team?",
+    "ctaSubtitle": "Set up your first admin account in under a minute.",
+    "ctaButton": "Create free account"
+  },
+  "Dashboard": {
+    "welcome": "Welcome back",
+    "welcomeSubtitle": "Here's a snapshot of your user base today.",
+    "manageUsers": "Manage users",
+    "totalUsers": "Total users",
+    "newThisWeek": "New this week",
+    "activeUsers": "Active users",
+    "admins": "Admins",
+    "recentUsers": "Recent users",
+    "viewAll": "View all"
   }
 }

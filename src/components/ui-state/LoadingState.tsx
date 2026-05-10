@@ -10,8 +10,7 @@ export default function LoadingState({ size = 220, className }: Props) {
   return (
     <div
       className={
-        className ??
-        "flex flex-1 items-center justify-center min-h-[60vh]"
+        className ?? "flex flex-1 items-center justify-center min-h-[60vh]"
       }
     >
       <LottiePlayer data={loadingAnimation} size={size} />
