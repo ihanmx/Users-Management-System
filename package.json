@@ -15,6 +15,7 @@
     "axios": "^1.16.0",
     "clsx": "^2.1.1",
     "js-cookie": "^3.0.5",
+    "lottie-react": "^2.4.1",
     "lucide-react": "^1.14.0",
     "next": "16.2.4",
     "next-intl": "^4.11.0",
