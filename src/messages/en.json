@@ -4,7 +4,25 @@
   },
   "Common": {
     "users": "Users",
-    "loading": "Loading..."
+    "loading": "Loading...",
+    "delete": "Delete",
+    "cancel": "Cancel",
+    "errorTitle": "Something went wrong",
+    "noUsers": "No users found",
+    "name": "Name",
+    "email": "Email",
+    "actions": "Actions"
+  },
+  "Users": {
+    "deleteConfirmTitle": "Delete this user?",
+    "deleteConfirmText": "This action cannot be undone.",
+    "deleted": "User deleted",
+    "created": "User created",
+    "createError": "Could not create user",
+    "deleteError": "Could not delete user"
+  },
+  "Auth": {
+    "invalidCredentials": "Invalid email or password"
   },
   "SignInPage": {
     "title": "Sign In to Your Account",

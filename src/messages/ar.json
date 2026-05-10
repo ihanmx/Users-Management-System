@@ -4,7 +4,25 @@
   },
   "Common": {
     "users": "المستخدمون",
-    "loading": "جار التحميل..."
+    "loading": "جار التحميل...",
+    "delete": "حذف",
+    "cancel": "إلغاء",
+    "errorTitle": "حدث خطأ ما",
+    "noUsers": "لا يوجد مستخدمون",
+    "name": "الاسم",
+    "email": "البريد الإلكتروني",
+    "actions": "إجراءات"
+  },
+  "Users": {
+    "deleteConfirmTitle": "هل تريد حذف هذا المستخدم؟",
+    "deleteConfirmText": "لا يمكن التراجع عن هذا الإجراء.",
+    "deleted": "تم حذف المستخدم",
+    "created": "تم إنشاء المستخدم",
+    "createError": "تعذر إنشاء المستخدم",
+    "deleteError": "تعذر حذف المستخدم"
+  },
+  "Auth": {
+    "invalidCredentials": "البريد الإلكتروني أو كلمة المرور غير صحيحة"
   },
   "SignInPage": {
     "title": "تسجيل الدخول إلى حسابك",
