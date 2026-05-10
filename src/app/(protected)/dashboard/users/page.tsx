@@ -1,10 +1,7 @@
-import Users from "@/modules/users/components/Users";
+import CreateUserForm from "@/modules/users/components/CreateUserForm";
 
-export default function UsersPage() {
-  return (
-    <div className="flex flex-col items-center justify-center">
-      <h1 className="text-2xl font-bold mb-4">Users List</h1>
-      <Users />
-    </div>
-  );
-}
+const page = () => {
+  return <CreateUserForm />;
+};
+
+export default page;

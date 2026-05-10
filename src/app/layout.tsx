@@ -3,7 +3,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages } from "next-intl/server";
 import "./globals.css";
-import Navbar from "@/components/organisms/Navbar";
 import ThemeProvider from "@/providers/ThemeProvider";
 import LocaleSwitcher from "@/components/atoms/LocalSwitcher";
 import { changeLocaleAction } from "@/i18n/locale";
@@ -42,7 +41,6 @@ export default async function RootLayout({
         <ThemeProvider>
           <QueryProvider>
             <NextIntlClientProvider messages={messages}>
-              <Navbar />
               {children}
               <LocaleSwitcher changeLocaleAction={changeLocaleAction} />
             </NextIntlClientProvider>
