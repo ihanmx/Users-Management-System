@@ -3,8 +3,9 @@ import type { User } from "@/types/user";
 
 interface Props {
   user: User;
-  onEdit?: (id: string) => void;
-  onDelete?: (id: string) => void;
+  onView?: (id: number) => void;
+  onEdit?: (id: number) => void;
+  onDelete?: (id: number) => void;
 }
 
 function getInitials(name: string) {
@@ -16,7 +17,7 @@ function getInitials(name: string) {
     .toUpperCase();
 }
 
-export default function UserRow({ user, onEdit, onDelete }: Props) {
+export default function UserRow({ user, onView, onEdit, onDelete }: Props) {
   return (
     <tr className="border-b border-zinc-200 hover:bg-zinc-50 dark:border-zinc-800 dark:hover:bg-zinc-900">
       <td className="px-4 py-3">
@@ -32,6 +33,9 @@ export default function UserRow({ user, onEdit, onDelete }: Props) {
       </td>
       <td className="px-4 py-3">
         <div className="flex gap-2">
+          <Button size="sm" variant="ghost" onClick={() => onView?.(user.id)}>
+            View
+          </Button>
           <Button size="sm" variant="ghost" onClick={() => onEdit?.(user.id)}>
             Edit
           </Button>

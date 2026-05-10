@@ -1,11 +1,7 @@
 import apiClient from "@/services/apiClient";
+import type { User } from "@/types/user";
 
-export interface GetUsersResponse {
-  email: string;
-  name: string;
-  password: string;
-  id: number;
-}
+export type GetUsersResponse = User;
 
 export function getUsersApi(): Promise<GetUsersResponse[]> {
   return apiClient.get<GetUsersResponse[]>(`/users`);
