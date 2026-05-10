@@ -1,5 +1,4 @@
-import SignInForm from "@/components/organisms/SignInForm";
-
+import SignInForm from "@/modules/auth/components/SignInForm";
 const Page = () => {
   return (
     <div>

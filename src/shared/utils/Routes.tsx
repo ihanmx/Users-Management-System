@@ -1,6 +1,6 @@
 export const publicRoutes = [
   { id: 1, key: "Home", path: "/" },
-  { id: 2, key: "Pricing", path: "/sign-in" },
+  { id: 2, key: "Sign in", path: "/sign-in" },
 ];
 
 export const protectedRoutes = [

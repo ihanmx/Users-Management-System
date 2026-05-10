@@ -7,7 +7,7 @@ export const TokenService = {
   setToken: (token: string) => {
     Cookies.set(TOKEN_KEY, token, {
       expires: 7,
-      secure: true,
+      secure: process.env.NODE_ENV === "production",
       sameSite: "strict",
     }); // Token expires in 7 days
   },
