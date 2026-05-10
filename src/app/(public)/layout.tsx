@@ -1,13 +1,7 @@
-import Navbar from "@/components/organisms/Navbar";
-import { publicRoutes } from "@/shared/utils/Routes";
+import PublicLayout from "@/components/layouts/PublicLayout";
 
-export default function PublicLayout({
+export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
-  return (
-    <>
-      <Navbar routes={publicRoutes} />
-      <main className="flex-1">{children}</main>
-    </>
-  );
+  return <PublicLayout>{children}</PublicLayout>;
 }

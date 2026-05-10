@@ -1,13 +1,7 @@
-import Navbar from "@/components/organisms/Navbar";
-import { protectedRoutes } from "@/shared/utils/Routes";
+import ProtectedLayout from "@/components/layouts/ProtectedLayout";
 
-export default function ProtectedLayout({
+export default function DashboardLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
-  return (
-    <>
-      <Navbar routes={protectedRoutes} />
-      <main className="flex-1">{children}</main>
-    </>
-  );
+  return <ProtectedLayout>{children}</ProtectedLayout>;
 }

@@ -1,6 +1,6 @@
-import React from "react";
 import SignInForm from "@/components/organisms/SignInForm";
-const page = () => {
+
+const Page = () => {
   return (
     <div>
       <SignInForm />
@@ -8,4 +8,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
