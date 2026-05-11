@@ -2,8 +2,10 @@
 
 import { useState } from "react";
 import { useParams, useRouter } from "next/navigation";
+import Card from "@/components/atoms/Card";
 import Input from "@/components/atoms/Input";
 import Button from "@/components/atoms/Button";
+import Title from "@/components/atoms/Title";
 import useGetUser from "../hooks/useGetUser";
 import useUpdateUser from "../hooks/useUpdateUser";
 import type { UpdateUserPayload } from "../api/updateUserApi";
@@ -15,8 +17,9 @@ const UpdateUserForm = () => {
 
   const { data: user, isPending, isError, error } = useGetUser(userId);
 
-  if (isPending) return <p>Loading user…</p>;
-  if (isError) return <p className="text-red-600">Error: {error.message}</p>;
+  if (isPending) return <p className="p-6">Loading user…</p>;
+  if (isError)
+    return <p className="p-6 text-red-600">Error: {error.message}</p>;
   if (!user) return null;
 
   return <UpdateUserFormInner userId={userId} user={user} />;
@@ -56,37 +59,42 @@ const UpdateUserFormInner = ({
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4 p-6">
-      <Input
-        placeholder="Name"
-        value={form.name}
-        onChange={(e) =>
-          setForm((prev) => ({ ...prev, name: e.target.value }))
-        }
-      />
-      <Input
-        placeholder="Email"
-        type="email"
-        value={form.email}
-        onChange={(e) =>
-          setForm((prev) => ({ ...prev, email: e.target.value }))
-        }
-      />
-      <Input
-        placeholder="New password (leave blank to keep current)"
-        type="password"
-        value={form.password}
-        onChange={(e) =>
-          setForm((prev) => ({ ...prev, password: e.target.value }))
-        }
-      />
+    <div className="flex justify-center px-4 py-10">
+      <Card size="lg" width="md">
+        <Title size="md">Edit user</Title>
+        <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+          <Input
+            placeholder="Name"
+            value={form.name}
+            onChange={(e) =>
+              setForm((prev) => ({ ...prev, name: e.target.value }))
+            }
+          />
+          <Input
+            placeholder="Email"
+            type="email"
+            value={form.email}
+            onChange={(e) =>
+              setForm((prev) => ({ ...prev, email: e.target.value }))
+            }
+          />
+          <Input
+            placeholder="New password (leave blank to keep current)"
+            type="password"
+            value={form.password}
+            onChange={(e) =>
+              setForm((prev) => ({ ...prev, password: e.target.value }))
+            }
+          />
 
-      <Button type="submit" disabled={isSaving}>
-        {isSaving ? "Saving…" : "Save changes"}
-      </Button>
+          <Button type="submit" disabled={isSaving} fullWidth center={false}>
+            {isSaving ? "Saving…" : "Save changes"}
+          </Button>
 
-      {error && <p className="text-red-600">{error.message}</p>}
-    </form>
+          {error && <p className="text-red-600 text-sm">{error.message}</p>}
+        </form>
+      </Card>
+    </div>
   );
 };
 

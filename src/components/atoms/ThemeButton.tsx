@@ -1,9 +1,25 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import { Sun, Moon } from "@/assets/icons/icons";
+
 export function ThemeToggle() {
   const { resolvedTheme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return (
+      <div
+        className="h-11 w-21 md:h-9 md:w-18 rounded-full bg-gray-200 dark:bg-gray-500 shadow-md"
+        aria-hidden
+      />
+    );
+  }
 
   const isDark = resolvedTheme === "dark";
 

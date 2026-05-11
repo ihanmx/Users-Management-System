@@ -1,7 +1,7 @@
-import CreateUserForm from "@/modules/users/components/CreateUserForm";
+import UsersTable from "@/modules/users/components/UsersTable";
 
 const page = () => {
-  return <CreateUserForm />;
+  return <UsersTable />;
 };
 
 export default page;

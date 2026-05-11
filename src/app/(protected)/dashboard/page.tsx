@@ -1,11 +1,13 @@
-import UsersTable from "@/modules/users/components/UsersTable";
-import ActionSection from "@/components/organisms/ActionSection";
-export default function UsersPage() {
+import WelcomeBanner from "@/components/dashboard/WelcomeBanner";
+import StatsGrid from "@/components/dashboard/StatsGrid";
+import RecentUsers from "@/components/dashboard/RecentUsers";
+
+export default function DashboardPage() {
   return (
-    <div className="flex flex-col items-center justify-center">
-      <ActionSection />
-      <h1 className="text-2xl font-bold mb-4">Users List</h1>
-      <UsersTable />
+    <div className="mx-auto max-w-7xl px-6 py-8 space-y-6">
+      <WelcomeBanner />
+      <StatsGrid />
+      <RecentUsers />
     </div>
   );
 }

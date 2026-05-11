@@ -1,6 +1,6 @@
 import Navbar from "@/components/organisms/Navbar";
 import LogoutButton from "@/modules/auth/components/LogoutButton";
-import { protectedRoutes } from "@/shared/utils/Routes";
+import { protectedRoutes } from "../../utils/Routes";
 import AuthGuard from "@/guards/AuthGuard";
 export default function ProtectedLayout({
   children,
