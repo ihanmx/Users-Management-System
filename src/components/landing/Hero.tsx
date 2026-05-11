@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { ArrowRight, Sparkles } from "lucide-react";
-
+import SlideUp from "@/animations/slideUp";
+import FadeIn from "@/animations/fadeIn";
 export default function Hero() {
   const t = useTranslations("Home");
 
@@ -17,14 +18,17 @@ export default function Hero() {
           <Sparkles className="h-3.5 w-3.5" />
           {t("heroEyebrow")}
         </span>
+        <FadeIn>
+          <h1 className="mt-6 text-4xl font-bold tracking-tight ds-text-primary sm:text-5xl lg:text-6xl">
+            {t("heroTitle")}
+          </h1>
+        </FadeIn>
 
-        <h1 className="mt-6 text-4xl font-bold tracking-tight ds-text-primary sm:text-5xl lg:text-6xl">
-          {t("heroTitle")}
-        </h1>
-
-        <p className="mx-auto mt-6 max-w-2xl text-base sm:text-lg leading-relaxed ds-text-secondary">
-          {t("heroSubtitle")}
-        </p>
+        <SlideUp>
+          <p className="mx-auto mt-6 max-w-2xl text-base sm:text-lg leading-relaxed ds-text-secondary">
+            {t("heroSubtitle")}
+          </p>
+        </SlideUp>
 
         <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
           <Link
